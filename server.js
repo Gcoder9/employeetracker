@@ -13,7 +13,7 @@ const db = mysql.createConnection(
 const fn = (options) => {
   if (options === 'exit') return process.exit();
 
-  const query = 'SELECT * FROM students' + (('enrolled' in options) ? ' WHERE ?' : '');
+  const query = 'SELECT * FROM employee' + (('enrolled' in options) ? ' WHERE ?' : '');
 
   db.query(query, options, function (err, results) {
     if (err) return console.error(err);
@@ -41,7 +41,7 @@ const init = () => {
       message: 'What option would you like to select?',
       choices,
     }
-  ]).then((answers) => fn(answers.query));
+  ])
 };
 
 init();
