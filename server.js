@@ -24,9 +24,13 @@ const fn = (options) => {
 
 const init = () => {
   const choices = [
-    { name: 'Show All Students', value: {} },
-    { name: 'Show Enrolled Students', value: { enrolled: 1 } },
-    { name: 'Show Unenrolled Students', value: { enrolled: 0 } },
+    { name: 'View all Employees', value: {} },
+    { name: 'View Departments', value: {} },
+    { name: 'View Roles', value: {} },
+    { name: 'Add Employee', value: {} },
+    { name: 'Add Departments', value: {} },
+    { name: 'Add Roles', value: {} },
+    { name: 'Update Employee Role', value: {} },
     { name: 'Exit', value: 'exit' },
   ];
 
